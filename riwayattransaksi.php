@@ -66,7 +66,9 @@ $hasil = mysqli_query($conn, $query);
                 <h4>Id Transaksi <?php echo $data['id_pesanan']; ?></h4>                
                 <p><?php echo $data['name']; ?></p>
                 <p><?php echo $data['nama_wisata']; ?></p>
-                <p><?php echo $data['tanggal_kunjung']; ?></p><br>
+                <p><?php echo $data['tanggal_kunjung']; ?></p>
+                <p><?php echo $data['status']; ?></p>
+                <br>
                 <button class="btn-order" data-id="<?php echo $data['id_pesanan']; ?>" type="button">Lihat Selengkapnya!</button>
             </div>
             <?php $nomor++; }?>
@@ -89,7 +91,7 @@ $hasil = mysqli_query($conn, $query);
             <span class="info" id="info-date"></span><br>
             <div class="btn-group">
                 <button class="ri-btn" type="button">Kembali</button>
-                <button class="print" onclick="window.print()">CETAK</button>
+                <button class="ri-btn" onclick="window.print()">CETAK</button>
             </div>
         </form>
     </div>
